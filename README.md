@@ -1,4 +1,4 @@
-# `codec_acelp_tetra` (v2, in-process)
+# `codec_acelp_tetra`
 
 This module adds `ACELP/8000` audio support to Asterisk as an out-of-tree codec.
 
