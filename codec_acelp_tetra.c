@@ -104,10 +104,8 @@ static void payload_to_serial(const uint8_t *payload, Word16 *serial)
 	size_t bit;
 
 	serial[0] = 0; /* BFI */
-	for (bit = 0; 
-git remote add origin git@github.com:cheetahdotcat/codec_acelp_tetra.git
-git push -u origin mainbit < ACELP_FRAME_BITS; ++bit) {
-		size_t byte_off = bit / 8;
+        for (bit = 0; bit < ACELP_FRAME_BITS; ++bit) {
+                size_t byte_off = bit / 8;
 		unsigned int bit_off = 7 - (bit % 8);
 
 		serial[bit + 1] = (payload[byte_off] >> bit_off) & 0x01;
